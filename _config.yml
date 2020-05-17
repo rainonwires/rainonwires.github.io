@@ -3,7 +3,6 @@ description: "A site for everything interesting!"
 
 header_pages:
   - index.md
-  - peter.md
   - about.md
   - contact.md
 
