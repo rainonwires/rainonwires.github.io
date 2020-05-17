@@ -1,7 +1,3 @@
-title: 'Illusive Interwebs'
-description: "A website for everything interesting!"
-baseurl: "/yeet"
-url: "https://illusiveinterwebs.dev/"
 
 header_pages:
   - index.md
