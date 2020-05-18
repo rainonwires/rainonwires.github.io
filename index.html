@@ -9,8 +9,16 @@
     <title>Illusive Interwebs - Curiously Interesting</title>
     <div class="hover-icon">
       <img src="">
-      <a href="https://github.com/rainonwires/rainonwires.github.io" alt="The Github Repository">Illusive Interwebs</a>
-
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <a href="#websites">Websites</a><br>
+      <a href="https://github.com/rainonwires/rainonwires.github.io" alt="The Github Repository">Illusive Interwebs</a><br>
+      <a href="#images">Images</a>
+      <a href="">Blog</a>
     </div>
 
   </head>
@@ -49,7 +57,7 @@ h1 {
 background: transparent;
   display: grid;
 
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-auto-rows: 200px;
   transition: 0.3s;
 }
@@ -60,11 +68,12 @@ background: transparent;
 
 .hover-icon {
   transition: 0.3s;
-position: center;
+text-align: center;
 padding: 8px 11px;
 background-size: contain;
 background-repeat: no-repeat;
 background-image: url(animation.gif);
+position: fixed;
 }
 .hover-icon:hover {
 padding: 16px 32px;
@@ -105,6 +114,17 @@ background-color: #transparent;
 
 
 
-
+    <button onclick="deLight()">Light</button>
+    <button onclick="deDark()">Dark</button>
+    <script>
+        function deDark() {
+            document.body.style.backgroundImage="url(palettedark.png)";
+            document.body.style.color = "white";
+        }
+        function deLight() {
+            document.body.style.backgroundImage="url(palette.png)";
+            document.body.style.color = "black";
+        }
+</script>
   </body>
 </html>
