@@ -84,7 +84,7 @@ background-color: transparent;
 }
 
   </style>
-  <body>
+  <body onload="deDark()">
 
 <h1>Interesting Websites</h1>
 <div class="wrapper">
@@ -135,6 +135,17 @@ background-color: transparent;
     <button onclick="deLight()">Light</button>
     <button onclick="deDark()">Dark</button>
     <script>
+      function checkr()
+      {
+        var de = localStorage.getItem('de');
+
+        if (de === "Dark") {
+          deDark()
+        }
+        else {
+          deLight()
+        }
+      }
         function deDark() {
             document.body.style.backgroundImage="url(palettedark.png)";
             document.body.style.color = "white";
