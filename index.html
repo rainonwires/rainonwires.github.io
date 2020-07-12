@@ -138,10 +138,12 @@ background-color: transparent;
         function deDark() {
             document.body.style.backgroundImage="url(palettedark.png)";
             document.body.style.color = "white";
+            window.localStorage.setItem('de', 'Dark');
         }
         function deLight() {
             document.body.style.backgroundImage="url(palette.png)";
             document.body.style.color = "black";
+            window.localStorage.setItem('de', 'Light');
         }
 </script>
   </body>
