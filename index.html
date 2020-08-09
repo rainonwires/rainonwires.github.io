@@ -1,233 +1,140 @@
-<!DOCTYPE html>
-
-
-
-
-
-<style>
-  /*
-  - HTML COmment SeCTion -
-  yep.. again afraid to lose code, this will act as a backup
-
-<body onload="checkr()">
-
-<button class="yepbuttn" onclick="deLight()">Light</button>
-<button class="yepbuttn" onclick="deDark()">Dark</button>
-
-  */
-</style>
-
-
-<html lang="en" dir="ltr">
-
-<a  href='https://twitter.com/rainonwires' target='_blank'><img src='Pictures/Twitter.svg' style='height: 4em;'/></a>
-
-<a href='https://webring.xxiivv.com/#random' target='_blank'><img src='https://webring.xxiivv.com/icon.white.svg' style='height: 4em;'/></a>
-
-<a href='https://merveilles.town/web/accounts/86060' target='_blank'><img src='Pictures/Merveilles.png' style='height: 4em;'/></a>
-
-<a href='https://github.com/rainonwires' target='_blank'><img src='Pictures/Github.svg' style='height: 4em;'/></a>
-
-
-
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="description" content="The illusive parts of the internet is at your fingertips...">
-  <meta name="keywords" content="Websites, & cool things.">
-  <meta name="author" content="rainonwires">
-  <link rel="icon" href="Pictures/palette.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
-  <title>Illusive Interwebs - Curiously Interesting</title>
-  <div class="hover-icon">
-    <img src="">
-    <br>
-    <br>
-    <br>
-
-    <br>
-
-
-
-
-    <br>
-
-    <a href="https://IllusiveInterwebs.dev/">Websites</a><br>
-    <a href="https://github.com/rainonwires/rainonwires.github.io" alt="The Github Repository">Illusive
-      Interwebs</a><br>
-    <a href="/Images">Images</a><br>
-    <a href="/Life">Blog</a><br>
-    <a href="/About">About</a><br>
-    <a href="/OSINT-Framework/public/index.html">OSINT</a>
+  <div style="margin-left:5%">
+    <meta charset="UTF-8">
+    <meta name="description" content="The illusive parts of the internet is at your fingertips...">
+    <meta name="keywords" content="Websites, & cool things.">
+    <meta name="author" content="rainonwires">
+    <link rel="icon" href="Pictures/palette.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Illusive Interwebs - Curiously Interesting</title>
+    <div class="sidenav">
+      <a href="https://github.com/rainonwires/rainonwires.github.io" alt="The Github Repository">Github</a><br>
+      <a href="/Images">Images</a><br>
+      <a href="/Life">Blog</a><br>
+      <a href="/About">About</a><br>
+    </div>
 
   </div>
-    <audio loop autoplay>
-            <source src='Music/clairdelune.ogg' type='audio/mpeg'>
-    </audio>
+  <audio loop autoplay>
+    <source src='Music/clairdelune.ogg' type='audio/mpeg'>
+  </audio>
 </head>
 <style>
-  /*
-#54425e purple
-#537278 blue
-#5eb089 turq
-#90e36f green
-#e9fb5d yellow
-
-
-  https://www.color-hex.com/color-palette/92202
-#81a16f lime green
-#537d6a green
-#396067 bluish green
-#383949 lighter purple
-#2b272e dark purple
-*/
-
-
-  .yepbuttn {
-    background-color: transparent;
-    color: #F2CDD7;
-    border: 2px solid #555555;
-  }
-
   body {
-    background-image: url('Pictures/palettedark.png');
-    color: white;
-    text-align: center;
-    font-family: 'Annie Use Your Telescope';
-    font-size: 22px;
+    background-color: #010101;
+    color: #8a6682;
   }
 
-
-  a {
-    color: #F2CDD7;
+  ::-webkit-scrollbar {
+    width: 15px;
   }
 
-  h1 {
-    color: #F2CDD7;
+  ::-webkit-scrollbar-track {
+    background: url(checkerboard.jpeg);
+    background-repeat: repeat;
+    background-size: 30px 30px;
   }
 
-  .wrapper {
-    background: transparent;
-    display: grid;
-
-    grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: 200px;
-    transition: 0.3s;
+  ::-webkit-scrollbar-thumb {
+    background: black;
   }
 
-  .wrapper:hover {
-    background-color: transparent;
-    padding: 15px;
-  }
-
-  .hover-icon {
-    transition: 0.3s;
-    text-align: center;
-    padding: 8px 11px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url(Pictures/animation.gif);
+  .sidenav {
+    height: 100%;
+    width: 160px;
     position: fixed;
-    background-color: black;
-    opacity: 0.7;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #010101;
+    overflow-x: hidden;
+    padding-top: 20px;
   }
 
-  .hover-icon:hover {
-    padding: 16px 32px;
-    opacity: 1;
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #6E2455;
+    display: block;
+  }
+
+  /* lol literally w3school sidenav lolol too lazy*/
+
+  .sidenav a:hover {
+    color: #8D2E71;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px;
+    }
+
+    .sidenav a {
+      font-size: 18px;
+    }
+  }
+
+  .main {
+    margin-left: 160px;
+    /* Same as the width of the sidenav */
+    font-size: 17px;
+    /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+
+  a:link {
+    color: #c692bb;
+  }
+
+  a:visited {
+    color: #149106;
+  }
+
+  a:hover {
+    color: #c692bb;
+  }
+
+  /* dud wtf even bro color is weird....*/
+  a:active {
+    color: #c692bb;
   }
 </style>
 
 <body>
-
-  <h1>Interesting Websites</h1>
-  <div class="wrapper">
-    <div class="project-div">
-
+  <div class="main">
+    <div>
       <h1><a href="https://100r.co/">Hundred Rabbits</a></h1>
-      <p class="">Hundred Rabbits is a Interesting Website run by <a href="https://kokorobot.ca/">Rekka</a> & <a
-          href="https://xxiivv.com/">Devine</a>,<br> these rabbits are my favorite on the interwebs,<br> they create
+      <p class="">Hundred Rabbits is a Interesting Website run by <a href="https://kokorobot.ca/">Rekka</a> & <a href="https://xxiivv.com/">Devine</a>,<br> these rabbits are my favorite on the interwebs,<br> they create
         lots of very interesting stuff.<br> Check them out.</p><br>
     </div>
-    <br>
-    <div class="project-div">
-
+    <div>
       <h1><a href="https://spoonm.org/">Spoonm</a></h1>
       <p class="">Spoonm is a pretty cool person!<br> I've never met them personally,<br> but they have had an impact on
-        my love for ricing!<br> Definitely an interesting site to learn from. <a
-          href="https://s.spoonm.org/webm/shes-a-maniac.webm">hehe</a> </p>
+        my love for ricing!<br> Definitely an interesting site to learn from. <a href="https://s.spoonm.org/webm/shes-a-maniac.webm">hehe</a> </p>
     </div>
-    <br>
-    <div class="project-div-2">
-
-      <h1><a href="http://newdream.net/crash/">"Crash" A random hosted website from 2001</a></h1>
-      <p class="">So this website is a weird one, it claims to be from 2001.<br> It links to a javascript method of
-        crashing your browser.<br> I personally found this very interesting. </p>
-    </div>
-    <br>
-    <div class="project-div-3">
-
+    <div>
       <h1><a href="http://lhohq.info/">Laughing Horse's Orifice Headquarters</a></h1>
       <p class="">This website certainly is funky. Majority of the content seen is very disturbing; in its own way.<br>
         Please don't visit this site if you are prone to seizures from flashing things.<br> Definitely an odd one
         though. Resembles netart.</p>
     </div>
-    <br>
-    <div class="project-div-3">
+    <div>
       <h1><a href="http://stanleylieber.com/">stanleylieber</a></h1>
       <p class="">Stanley Lieber is a odd website,<br> seems to be comprised of interesting images from different image
-        boards. Check it out.<br> Although, some content may not be appropriate for some.<br> <a
-          href="https://img.stanleylieber.com/">"the green"</a></p>
+        boards. Check it out.<br> Although, some content may not be appropriate for some.<br> <a href="https://img.stanleylieber.com/">"the green"</a></p>
     </div>
-    <br>
-    <div class="project-div-3">
+    <div>
       <h1><a href="http://www.suicide.com/">Suicide</a></h1>
       <p class="">WOah! Suicide? What?<br> Well, i'm adding this just because it is truly a interesting site.<br> There is TONS of information you can learn from.<br> I totally recommend browsing it. (Even if you aren't suicidal.) </p>
     </div>
-    <div><a href=""></a></div>
-    <div><a href=""></a></div>
-    <div><a href=""></a></div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-  <script>
-/*    function checkr() {
-      var de = localStorage.getItem('de');
-
-      if (de === "Dark") {
-        deDark()
-      } else {
-        deLight()
-      }
-    }
-
-    function deDark() {
-      document.body.style.backgroundImage = "url(palettedark.png)";
-      document.body.style.color = "white";
-      window.localStorage.setItem('de', 'Dark');
-    }
-
-    function deLight() {
-      document.body.style.backgroundImage = "url(palette.png)";
-      document.body.style.color = "#F2CDD7";
-      window.localStorage.setItem('de', 'Light');
-    }
-
-
-  NO CODE LEFT BEHIND! (hehe funny comment)
-  */
-  </script>
 </body>
+
+<script>
+
+</script>
 
 </html>
